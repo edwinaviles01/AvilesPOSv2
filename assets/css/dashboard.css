@@ -1,0 +1,308 @@
+/* ============================================
+   DASHBOARD - KPIs, avisos, secciones
+   ============================================ */
+
+/* ---------- Secciones ---------- */
+.dash-section {
+    margin-bottom: 32px;
+}
+
+.dash-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dash-section-title svg {
+    color: #0e5dac;
+}
+
+.dash-section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e4e7eb;
+    margin-left: 8px;
+}
+
+/* ---------- KPI Cards ---------- */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.kpi-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    width: 100%;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kpi-icon.blue { background: #e6f0fb; color: #0e5dac; }
+.kpi-icon.green { background: #e0f5e8; color: #1e7a3f; }
+.kpi-icon.yellow { background: #fff4e0; color: #a05a00; }
+.kpi-icon.red { background: #ffe0e0; color: #b00020; }
+.kpi-icon.gray { background: #f0f2f5; color: #666; }
+
+.kpi-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.kpi-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.kpi-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* ---------- Lista de avisos ---------- */
+.avisos-list {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.aviso-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef1f4;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+
+.aviso-item:last-child {
+    border-bottom: none;
+}
+
+.aviso-item:hover {
+    background: #f9fbfd;
+}
+
+.aviso-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.aviso-icon.danger { background: #ffe0e0; color: #b00020; }
+.aviso-icon.warning { background: #fff4e0; color: #a05a00; }
+.aviso-icon.info { background: #e6f0fb; color: #0e5dac; }
+.aviso-icon.success { background: #e0f5e8; color: #1e7a3f; }
+.aviso-icon.neutral { background: #f0f2f5; color: #888; }
+
+.aviso-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.aviso-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.aviso-desc {
+    font-size: 12px;
+    color: #888;
+}
+
+.aviso-count {
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.aviso-count.danger { color: #b00020; }
+.aviso-count.warning { color: #a05a00; }
+.aviso-count.info { color: #0e5dac; }
+.aviso-count.neutral { color: #888; }
+
+.aviso-arrow {
+    color: #c7cdd4;
+    flex-shrink: 0;
+}
+
+/* ---------- Placeholder card (secciones sin datos) ---------- */
+.placeholder-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.placeholder-card svg {
+    color: #c7cdd4;
+    margin-bottom: 12px;
+}
+
+.placeholder-card h4 {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.placeholder-card p {
+    font-size: 12px;
+    color: #999;
+    max-width: 360px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.placeholder-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    background: #f0f2f5;
+    color: #888;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Mini listas ---------- */
+.mini-lista {
+    margin-top: 12px;
+    border-top: 1px solid #eef1f4;
+}
+
+.mini-lista-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #eef1f4;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+
+.mini-lista-item:hover {
+    background: #f9fbfd;
+}
+
+.mini-lista-item:last-child {
+    border-bottom: none;
+}
+
+.mini-lista-item .nombre {
+    color: #333;
+    font-weight: 500;
+}
+
+.mini-lista-item .info {
+    color: #888;
+    font-size: 12px;
+}
+
+/* ---------- Accesos rápidos ---------- */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.quick-action {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    border: 1px solid transparent;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    border-color: #e6f0fb;
+}
+
+.quick-action-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f0fb;
+    color: #0e5dac;
+    flex-shrink: 0;
+}
+
+.quick-action span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ---------- Ajustes extra ---------- */
+.dash-section .kpi-grid {
+    margin-bottom: 16px;
+}
+
+.dash-section .avisos-list {
+    margin-top: 0;
+}

@@ -1,0 +1,208 @@
+/* ============================================
+   BOTONES Y BADGES
+   ============================================ */
+
+/* ---------- Botones principales ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.05s;
+    font-family: inherit;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: #0e5dac;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0a4a8a;
+}
+
+.btn-secondary {
+    background: #e4e7eb;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #d1d5da;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.btn-block {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+/* ---------- Botones icono (editar/eliminar en tablas) ---------- */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+    background: transparent;
+}
+
+.btn-icon.edit {
+    color: #0e5dac;
+}
+
+.btn-icon.edit:hover {
+    background: #e6f0fb;
+}
+
+.btn-icon.delete {
+    color: #b00020;
+}
+
+.btn-icon.delete:hover {
+    background: #ffe0e0;
+}
+
+/* ---------- Botones icono pequeños (en listas) ---------- */
+.btn-icon-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.15s;
+    padding: 0;
+}
+
+.btn-icon-sm.edit {
+    color: #0e5dac;
+}
+
+.btn-icon-sm.edit:hover {
+    background: #e6f0fb;
+}
+
+.btn-icon-sm.delete {
+    color: #b00020;
+}
+
+.btn-icon-sm.delete:hover {
+    background: #ffe0e0;
+}
+
+/* ---------- Botón + pequeño (junto a labels) ---------- */
+.btn-add-mini {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e6f0fb;
+    color: #0e5dac;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.15s, transform 0.1s;
+    padding: 0;
+    line-height: 1;
+}
+
+.btn-add-mini:hover {
+    background: #0e5dac;
+    color: #fff;
+}
+
+.btn-add-mini:active {
+    transform: scale(0.92);
+}
+
+/* ---------- Botón quitar foto ---------- */
+.btn-quitar-foto {
+    display: none;
+    margin-top: 8px;
+    width: 100%;
+    padding: 6px;
+    font-size: 12px;
+    background: #ffe0e0;
+    color: #b00020;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-quitar-foto.visible {
+    display: block;
+}
+
+/* ---------- Badges de estado ---------- */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge-success {
+    background: #e0f5e8;
+    color: #1e7a3f;
+}
+
+.badge-danger {
+    background: #ffe0e0;
+    color: #b00020;
+}
+
+.badge-warning {
+    background: #fff4e0;
+    color: #a05a00;
+}
+
+.badge-inactivo {
+    background: rgba(120, 120, 120, 0.9);
+    color: #fff;
+}
+
+.badge-stock-bajo {
+    background: rgba(255, 200, 60, 0.95);
+    color: #7a4a00;
+}
+
+.badge-agotado {
+    background: rgba(176, 0, 32, 0.95);
+    color: #fff;
+}

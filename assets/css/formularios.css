@@ -1,0 +1,284 @@
+/* ============================================
+   FORMULARIOS
+   ============================================ */
+
+.form-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group label .req {
+    color: #b00020;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+    background: #fff;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 36px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0e5dac;
+    box-shadow: 0 0 0 3px rgba(14,93,172,0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group .help {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.form-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #0e5dac;
+}
+
+.form-check label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eef1f4;
+}
+
+/* ---------- Secciones del formulario ---------- */
+.form-section {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0e5dac;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-section-title svg {
+    color: #0e5dac;
+}
+
+.form-section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e6f0fb;
+    margin-left: 8px;
+}
+
+/* ---------- Label con botón + al lado ---------- */
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.label-row label {
+    margin-bottom: 0;
+}
+
+/* ---------- Layout con panel lateral ---------- */
+.form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 850px) 320px;
+    gap: 24px;
+    align-items: start;
+    justify-content: center;
+}
+
+.form-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.side-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px;
+}
+
+.side-card h3 {
+    font-size: 13px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+/* ---------- Prefijo/sufijo de inputs ---------- */
+.input-suffix {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-suffix input {
+    padding-right: 42px;
+}
+
+.input-suffix .suffix {
+    position: absolute;
+    right: 12px;
+    color: #888;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+/* ---------- Foto del producto ---------- */
+.foto-preview {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+    background: #fafbfc;
+    overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+}
+
+.foto-preview:hover {
+    border-color: #0e5dac;
+    background: #f0f7ff;
+}
+
+.foto-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-preview svg {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+.foto-preview input[type="file"] {
+    display: none;
+}
+
+.foto-hint {
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ---------- Código de barras ---------- */
+.barcode-preview {
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #eef1f4;
+}
+
+.barcode-preview svg {
+    width: 100%;
+    height: 60px;
+    display: block;
+}
+
+.barcode-text {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    letter-spacing: 2px;
+    word-break: break-all;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .form-layout {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,355 @@
+/* ============================================
+   USUARIOS - Configuración
+   ============================================ */
+
+/* Listado */
+.user-row-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-row-estado .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.user-row-estado.activo .dot {
+    background: #1e7a3f;
+}
+
+.user-row-estado.inactivo .dot {
+    background: #b00020;
+}
+
+.user-row-estado.activo {
+    color: #1e7a3f;
+}
+
+.user-row-estado.inactivo {
+    color: #b00020;
+}
+
+.badge-rol {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge-rol.administrador { background: #ffe0e0; color: #b00020; }
+.badge-rol.gerente { background: #fff4e0; color: #a05a00; }
+.badge-rol.supervisor { background: #e6f0fb; color: #0e5dac; }
+.badge-rol.cajero { background: #e0f5e8; color: #1e7a3f; }
+
+/* Modal de usuario */
+.modal-usuario {
+    max-width: 820px;
+}
+
+#modalUsuario .modal-body {
+    padding: 20px 24px;
+}
+
+.user-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.user-col {
+    min-width: 0;
+}
+
+.user-col-titulo {
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e4e7eb;
+}
+
+.user-form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.user-form-grupo label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+}
+
+.user-form-grupo label .req {
+    color: #b00020;
+}
+
+.user-form-grupo input,
+.user-form-grupo select {
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+    width: 100%;
+}
+
+.user-form-grupo input:focus,
+.user-form-grupo select:focus {
+    outline: none;
+    border-color: #0e5dac;
+    box-shadow: 0 0 0 3px rgba(14,93,172,0.12);
+}
+
+.user-form-grupo select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 34px;
+}
+
+.user-form-grupo .help {
+    font-size: 11px;
+    color: #888;
+}
+
+.user-form-grupo .help.warn {
+    color: #a05a00;
+}
+
+/* Permisos */
+.permisos-info {
+    background: #e6f0fb;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #0a4a8a;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.permisos-info strong {
+    color: #0e5dac;
+}
+
+.permisos-lista {
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.permisos-lista::-webkit-scrollbar {
+    width: 8px;
+}
+
+.permisos-lista::-webkit-scrollbar-thumb {
+    background: #d0d5db;
+    border-radius: 4px;
+}
+
+.permisos-grupo {
+    margin-bottom: 14px;
+}
+
+.permisos-grupo-titulo {
+    font-size: 10px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+    background: #f7f9fb;
+    border-radius: 4px;
+}
+
+.permiso-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    transition: background 0.15s;
+}
+
+.permiso-item:hover {
+    background: #fafbfc;
+}
+
+.permiso-item input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #0e5dac;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.permiso-item label {
+    cursor: pointer;
+    color: #333;
+    flex: 1;
+    user-select: none;
+}
+
+.permiso-item.heredado label {
+    color: #888;
+}
+
+.permiso-item.heredado input[type="checkbox"] {
+    accent-color: #888;
+}
+
+.permiso-item.extra label {
+    color: #1e7a3f;
+    font-weight: 600;
+}
+
+.permiso-item.extra input[type="checkbox"] {
+    accent-color: #1e7a3f;
+}
+
+.permiso-item.denegado label {
+    color: #b00020;
+    text-decoration: line-through;
+}
+
+.permiso-item.denegado input[type="checkbox"] {
+    accent-color: #b00020;
+}
+
+.permiso-badge {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.permiso-badge.rol {
+    background: #e4e7eb;
+    color: #666;
+}
+
+.permiso-badge.extra {
+    background: #e0f5e8;
+    color: #1e7a3f;
+}
+
+.permiso-badge.denegado {
+    background: #ffe0e0;
+    color: #b00020;
+}
+
+/* Sección de contraseña */
+.user-pass-section {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eef1f4;
+}
+
+.user-pass-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0e5dac;
+    background: #e6f0fb;
+    border: 1px solid #c2dbf5;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+}
+
+.user-pass-btn:hover {
+    background: #d1e5f7;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .user-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Input de contraseña con ojito ---------- */
+.user-input-password {
+    position: relative;
+}
+
+.user-input-password input {
+    padding-right: 42px !important;
+}
+
+.user-toggle-pass {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+}
+
+.user-toggle-pass:hover {
+    background: #f0f2f5;
+    color: #0e5dac;
+}
+
+.user-toggle-pass .icon-eye-off {
+    display: none;
+}
+
+.user-toggle-pass.visible .icon-eye {
+    display: none;
+}
+
+.user-toggle-pass.visible .icon-eye-off {
+    display: block;
+}
+
+/* ---------- Aviso de Caps Lock ---------- */
+.user-caps-warning {
+    display: none;
+    align-items: center;
+    gap: 5px;
+    background: #fff4e0;
+    color: #a05a00;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.user-caps-warning.visible {
+    display: flex;
+}

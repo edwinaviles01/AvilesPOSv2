@@ -1,0 +1,195 @@
+/* ============================================
+   PRODUCTOS - Grid de tarjetas
+   ============================================ */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.producto-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.producto-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.producto-card.inactivo {
+    opacity: 0.6;
+}
+
+/* ---------- Imagen ---------- */
+.producto-img {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #f7f9fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.producto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.producto-img .sin-foto {
+    color: #c7cdd4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+}
+
+/* ---------- Badges superpuestos ---------- */
+.producto-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.producto-badges .badge {
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ---------- Info ---------- */
+.producto-info {
+    padding: 14px 14px 4px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-codigo {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.producto-nombre {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 36px;
+}
+
+.producto-depto {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.producto-precio-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px solid #eef1f4;
+}
+
+.producto-precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0e5dac;
+}
+
+.producto-precio-label {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.producto-stock {
+    text-align: right;
+    font-size: 11px;
+    color: #666;
+}
+
+.producto-stock strong {
+    display: block;
+    font-size: 15px;
+    color: #333;
+}
+
+.producto-stock.stock-bajo strong {
+    color: #a05a00;
+}
+
+.producto-stock.stock-agotado strong {
+    color: #b00020;
+}
+
+/* ---------- Acciones ---------- */
+.producto-acciones {
+    display: flex;
+    border-top: 1px solid #eef1f4;
+}
+
+.producto-acciones a {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.producto-acciones a:hover {
+    background: #f7f9fb;
+}
+
+.producto-acciones a.edit:hover {
+    color: #0e5dac;
+}
+
+.producto-acciones a.delete:hover {
+    color: #b00020;
+    background: #fff5f5;
+}
+
+.producto-acciones a + a {
+    border-left: 1px solid #eef1f4;
+}
