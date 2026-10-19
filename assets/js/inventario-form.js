@@ -357,13 +357,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const stockNuevo = tipo === 'entrada' ? p.stock + cantidad : p.stock - cantidad;
+        // FORZAR conversión a número (evita que se concatenen strings)
+        const stockActual = parseInt(p.stock) || 0;
+        const stockNuevo = tipo === 'entrada' ? stockActual + cantidad : stockActual - cantidad;
 
         if (tipo === 'salida' && stockNuevo < 0) {
-            resultadoStock.innerHTML = `<span style="color:#b00020; font-weight:600;">No hay suficiente stock (disponible: ${p.stock})</span>`;
+            resultadoStock.innerHTML = `<span style="color:#b00020; font-weight:600;">No hay suficiente stock (disponible: ${stockActual})</span>`;
         } else {
             const color = tipo === 'entrada' ? '#1e7a3f' : '#b00020';
-            resultadoStock.innerHTML = `Stock: <strong>${p.stock}</strong> → <strong style="color:${color};">${stockNuevo}</strong>`;
+            resultadoStock.innerHTML = `Stock: <strong>${stockActual}</strong> → <strong style="color:${color};">${stockNuevo}</strong>`;
         }
     }
 

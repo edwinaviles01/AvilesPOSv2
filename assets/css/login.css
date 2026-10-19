@@ -37,20 +37,6 @@
     display: block;
 }
 
-.login-panel h1 {
-    font-size: 22px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 6px;
-}
-
-.login-subtitle {
-    text-align: center;
-    color: #888;
-    font-size: 13px;
-    margin-bottom: 28px;
-}
-
 .login-panel label {
     display: block;
     margin-bottom: 6px;
@@ -156,7 +142,7 @@
     z-index: 1;
 }
 
-.info-panel h2 {
+.info-panel h1 {
     font-size: 26px;
     margin-bottom: 6px;
 }
@@ -167,7 +153,7 @@
     margin-bottom: 36px;
 }
 
-.info-contact h3 {
+.info-contact h2 {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -204,34 +190,4 @@
     font-size: 13px;
     opacity: 0.9;
     text-align: center;
-}
-
-/* ---------- Contenedor genérico (login-container del dashboard viejo) ---------- */
-.login-container {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 360px;
-    margin: 60px auto;
-}
-
-.login-container h1 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #333;
-    font-size: 22px;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-    .login-wrapper {
-        flex-direction: column;
-        min-height: auto;
-    }
-    .login-panel,
-    .info-panel {
-        padding: 35px 25px;
-    }
 }

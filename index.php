@@ -22,8 +22,6 @@ if (isset($_SESSION['usuario_id'])) {
     <!-- Panel izquierdo: formulario -->
     <div class="login-panel">
         <img src="assets/img/logo_aviles.png" alt="AvilesPOS" class="login-logo">
-        <h1>Iniciar sesión</h1>
-        <p class="login-subtitle">Accede al sistema de punto de venta</p>
 
         <?php if (isset($_GET['error'])): ?>
             <div class="mensaje-error">Usuario o contraseña incorrectos</div>
@@ -31,7 +29,7 @@ if (isset($_SESSION['usuario_id'])) {
 
         <form action="validar_login.php" method="POST" id="formLogin">
             <label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="usuario" required autofocus autocomplete="username">
+            <input type="text" name="usuario" id="usuario" required autofocus autocomplete="off">
 
             <label for="password">Contraseña</label>
             <div class="input-password">
@@ -63,11 +61,11 @@ if (isset($_SESSION['usuario_id'])) {
     <!-- Panel derecho: info/contacto -->
     <div class="info-panel">
         <div class="info-content">
-            <h2>AvilesPOS</h2>
+            <h1>AvilesPOS</h1>
             <p class="info-tagline">Sistema de facturación y punto de venta</p>
 
             <div class="info-contact">
-                <h3>Contacto</h3>
+                <h2>Contacto</h2>
 
                 <a href="https://www.instagram.com/edwinaviles_/" target="_blank" rel="noopener" class="contact-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">

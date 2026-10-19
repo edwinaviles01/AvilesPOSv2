@@ -228,10 +228,6 @@ $ventas_tab = 'nueva';
                             <span class="valor" id="posTotal">C$ 0.00</span>
                         </div>
                         <button type="button" class="nv-btn-cobrar" id="btnCobrar" disabled>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                                <line x1="12" y1="1" x2="12" y2="23"></line>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                            </svg>
                             Cobrar
                         </button>
                     </div>
@@ -255,7 +251,7 @@ $ventas_tab = 'nueva';
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-            </div>
+            </div>  
 
             <div class="modal-body cobro-layout">
 
