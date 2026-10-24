@@ -1,0 +1,207 @@
+/* ============================================
+   TICKET DE VENTA
+   ============================================ */
+
+.ticket-body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    padding: 30px 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.ticket-acciones {
+    max-width: 400px;
+    margin: 0 auto 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.ticket {
+    width: 100%;
+    max-width: 350px;
+    background: #fff;
+    padding: 24px 22px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    color: #000;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.ticket-header {
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #000;
+    margin-bottom: 12px;
+}
+
+.ticket-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.ticket-negocio {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+}
+
+.ticket-info-negocio {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.ticket-titulo-doc {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #000;
+    margin-bottom: 10px;
+}
+
+.ticket-meta {
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.ticket-meta-linea {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.ticket-meta-linea span:first-child {
+    flex-shrink: 0;
+}
+
+.ticket-meta-linea span:last-child {
+    text-align: right;
+    word-break: break-all;
+}
+
+.ticket-items {
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.ticket-item {
+    margin-bottom: 8px;
+}
+
+.ticket-item:last-child {
+    margin-bottom: 0;
+}
+
+.ticket-item-nombre {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    word-break: break-word;
+}
+
+.ticket-item-linea {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.ticket-item-detalle {
+    padding-left: 6px;
+    font-size: 11px;
+}
+
+.ticket-totales {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.ticket-total-linea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.ticket-total-linea.descuento {
+    color: #b00020;
+}
+
+.ticket-total-linea.gran-total {
+    font-size: 15px;
+    font-weight: bold;
+    border-top: 1px solid #000;
+    padding-top: 6px;
+    margin-top: 6px;
+}
+
+.ticket-pago {
+    border-top: 1px dashed #000;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    font-size: 11px;
+}
+
+.ticket-pago-linea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.ticket-pago-linea.destacado {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ticket-pie {
+    text-align: center;
+    padding-top: 12px;
+    border-top: 1px dashed #000;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.ticket-pie strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.ticket-gracias {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* ============================================
+   IMPRESIÓN
+   ============================================ */
+@media print {
+    @page {
+        margin: 0;
+        size: 80mm auto;
+    }
+
+    body.ticket-body {
+        background: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ticket-acciones {
+        display: none;
+    }
+
+    .ticket {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 10px 8px;
+        margin: 0;
+    }
+}

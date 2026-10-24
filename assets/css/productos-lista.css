@@ -1,0 +1,235 @@
+/* ============================================
+   LISTA DE PRODUCTOS - Búsqueda, tabs y secciones
+   ============================================ */
+
+/* Buscador */
+.prod-buscador {
+    position: relative;
+    margin-bottom: 16px;
+    max-width: 500px;
+}
+
+.prod-buscador input {
+    width: 100%;
+    padding: 11px 42px 11px 42px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.2s, box-shadow 0.2s;
+    background: #fff;
+}
+
+.prod-buscador input:focus {
+    outline: none;
+    border-color: #0e5dac;
+    box-shadow: 0 0 0 3px rgba(14,93,172,0.12);
+}
+
+.prod-buscador-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+.prod-buscador-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+}
+
+.prod-buscador-clear:hover {
+    background: #f0f2f5;
+    color: #b00020;
+}
+
+.prod-buscador-clear.visible {
+    display: flex;
+}
+
+/* Tabs de departamento */
+.prod-depto-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+}
+
+.prod-depto-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.prod-depto-tabs::-webkit-scrollbar-thumb {
+    background: #d0d5db;
+    border-radius: 2px;
+}
+
+.prod-depto-tab {
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    background: #fff;
+    border: 1px solid #e4e7eb;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    font-family: inherit;
+    flex-shrink: 0;
+}
+
+.prod-depto-tab:hover {
+    border-color: #0e5dac;
+    color: #0e5dac;
+}
+
+.prod-depto-tab.activo {
+    background: #0e5dac;
+    color: #fff;
+    border-color: #0e5dac;
+}
+
+/* Secciones de departamento */
+.prod-seccion {
+    margin-bottom: 32px;
+}
+
+.prod-seccion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.prod-seccion-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prod-seccion-titulo::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #0e5dac;
+    border-radius: 1px;
+}
+
+.prod-seccion-count {
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+}
+
+.prod-seccion-vermas {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0e5dac;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.15s;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.prod-seccion-vermas:hover {
+    background: #e6f0fb;
+}
+
+/* Grid de productos (reutilizado en secciones) */
+.prod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+/* Cuando está vacío por búsqueda */
+.prod-vacio {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Modal de departamento - Paginación */
+.modal-paginacion {
+    display: flex;
+    gap: 6px;
+    padding: 12px 22px;
+    border-bottom: 1px solid #eef1f4;
+    overflow-x: auto;
+    background: #f7f9fb;
+    scrollbar-width: thin;
+}
+
+.modal-paginacion::-webkit-scrollbar {
+    height: 4px;
+}
+
+.modal-paginacion::-webkit-scrollbar-thumb {
+    background: #d0d5db;
+    border-radius: 2px;
+}
+
+.modal-pagina-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    background: #fff;
+    border: 1px solid #e4e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    font-family: inherit;
+    flex-shrink: 0;
+    min-width: 36px;
+}
+
+.modal-pagina-btn:hover {
+    border-color: #0e5dac;
+    color: #0e5dac;
+}
+
+.modal-pagina-btn.activo {
+    background: #0e5dac;
+    color: #fff;
+    border-color: #0e5dac;
+}
+
+.modal-pagina-btn.nav {
+    font-size: 14px;
+}
+
+.modal-pagina-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

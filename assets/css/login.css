@@ -1,0 +1,193 @@
+/* ============================================
+   LOGIN
+   ============================================ */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f2f5 0%, #e0e8f2 100%);
+}
+
+.login-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    min-height: 560px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+
+/* ---------- Panel izquierdo: formulario ---------- */
+.login-panel {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.login-panel label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-panel input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.login-panel input:focus {
+    outline: none;
+    border-color: #0e5dac;
+    box-shadow: 0 0 0 3px rgba(14,93,172,0.12);
+}
+
+.input-password {
+    position: relative;
+}
+
+.input-password input {
+    padding-right: 42px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password:hover {
+    color: #0e5dac;
+}
+
+.toggle-password .icon-eye-off { display: none; }
+.toggle-password.visible .icon-eye { display: none; }
+.toggle-password.visible .icon-eye-off { display: block; }
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #0e5dac;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 6px;
+}
+
+.btn-login:hover:not(:disabled) {
+    background-color: #0a4a8a;
+}
+
+.btn-login:disabled {
+    background-color: #7ba7d4;
+    cursor: not-allowed;
+}
+
+/* ---------- Panel derecho: info/contacto ---------- */
+.info-panel {
+    flex: 1;
+    background: linear-gradient(160deg, #0e5dac 0%, #083f77 100%);
+    color: #fff;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-panel::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    transform: translate(40%, -40%);
+}
+
+.info-content {
+    position: relative;
+    z-index: 1;
+}
+
+.info-panel h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.info-tagline {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 36px;
+}
+
+.info-contact h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    opacity: 0.85;
+    font-weight: 600;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    transition: background 0.2s;
+    font-size: 14px;
+}
+
+.contact-link:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.contact-link svg {
+    flex-shrink: 0;
+}
+
+.info-footer {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 13px;
+    opacity: 0.9;
+    text-align: center;
+}

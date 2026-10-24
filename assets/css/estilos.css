@@ -1,0 +1,25 @@
+/* ============================================
+   AvilesPOS - Hoja de estilos principal
+   Importa todos los módulos CSS del sistema
+   ============================================ */
+
+@import url('base.css');
+@import url('layout.css');
+@import url('botones.css');
+@import url('alertas.css');
+@import url('formularios.css');
+@import url('tablas.css');
+@import url('modales.css');
+@import url('login.css');
+@import url('dashboard.css');
+@import url('productos.css');
+@import url('tabs.css');
+@import url('turnos.css');
+@import url('ticket.css');
+@import url('productos-lista.css');
+@import url('inventario-form.css');
+@import url('nueva-venta.css');
+@import url('historial.css');
+@import url('usuarios.css');
+@import url('reportes.css');
+@import url('bd.css');

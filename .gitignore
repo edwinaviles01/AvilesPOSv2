@@ -1,0 +1,22 @@
+# Configuración local
+.env
+.env.*
+!.env.example
+
+# XAMPP / archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias
+vendor/
+node_modules/

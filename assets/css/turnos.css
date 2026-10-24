@@ -1,0 +1,304 @@
+/* ============================================
+   TURNOS - Tarjeta de turno activo
+   ============================================ */
+
+.turno-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid #1e7a3f;
+    overflow: hidden;
+}
+
+.turno-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.turno-card-header h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.turno-estado-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-right: 6px;
+}
+
+.turno-estado-badge.abierto {
+    background: #e0f5e8;
+    color: #1e7a3f;
+}
+
+.turno-estado-badge.compartido {
+    background: #e6f0fb;
+    color: #0e5dac;
+}
+
+.turno-card-fecha {
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+}
+
+.turno-card-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 0;
+    background: #f7f9fb;
+}
+
+.turno-stat {
+    padding: 20px 24px;
+    border-right: 1px solid #eef1f4;
+}
+
+.turno-stat:last-child {
+    border-right: none;
+}
+
+.turno-stat-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.turno-stat-valor {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0e5dac;
+}
+
+.turno-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 24px;
+    background: #fff;
+    border-top: 1px solid #eef1f4;
+}
+
+@media (max-width: 600px) {
+    .turno-card-stats {
+        grid-template-columns: 1fr;
+    }
+    .turno-stat {
+        border-right: none;
+        border-bottom: 1px solid #eef1f4;
+    }
+    .turno-card-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================================
+   MODAL CERRAR TURNO
+   ============================================ */
+
+.cierre-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    align-items: start;
+}
+
+.cierre-col-izq {
+    min-width: 0;
+}
+
+.cierre-col-der {
+    min-width: 0;
+    border-left: 1px solid #eef1f4;
+    padding-left: 24px;
+}
+
+.cierre-seccion {
+    margin-bottom: 22px;
+}
+
+.cierre-seccion:last-child {
+    margin-bottom: 0;
+}
+
+.cierre-seccion-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0e5dac;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cierre-seccion-titulo::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e6f0fb;
+}
+
+.cierre-info-box {
+    background: #f7f9fb;
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+
+.cierre-linea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+}
+
+.cierre-linea strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.cierre-linea strong.verde {
+    color: #1e7a3f;
+}
+
+.cierre-linea strong.rojo {
+    color: #b00020;
+}
+
+/* Caja del desglose */
+.cierre-efectivo-box {
+    background: #e6f0fb;
+    border-radius: 8px;
+    padding: 6px 18px;
+}
+
+.cierre-efectivo-box .cierre-linea {
+    color: #0a4a8a;
+    padding: 8px 0;
+    border-bottom: 1px dashed #c9ddf5;
+}
+
+.cierre-efectivo-box .cierre-linea:last-child {
+    border-bottom: none;
+}
+
+/* Colores específicos: verde para sumas, rojo para restas */
+.cierre-efectivo-box .cierre-linea strong {
+    color: #0e5dac;
+}
+
+.cierre-efectivo-box .cierre-linea strong.verde {
+    color: #1e7a3f;
+    font-weight: 700;
+}
+
+.cierre-efectivo-box .cierre-linea strong.rojo {
+    color: #b00020;
+    font-weight: 700;
+}
+
+/* Línea del total */
+.cierre-efectivo-box .cierre-linea.total {
+    padding-top: 12px;
+    margin-top: 4px;
+    border-top: 2px solid #c9ddf5;
+    border-bottom: none;
+    font-size: 15px;
+}
+
+.cierre-efectivo-box .cierre-linea.total span {
+    font-weight: 700;
+    color: #0a4a8a;
+}
+
+.cierre-efectivo-box .cierre-linea.total strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0e5dac;
+}
+
+/* Diferencia */
+.cierre-diferencia {
+    background: #f7f9fb;
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.cierre-diferencia.exacto {
+    background: #e0f5e8;
+}
+
+.cierre-diferencia.sobrante {
+    background: #e0f5e8;
+}
+
+.cierre-diferencia.faltante {
+    background: #ffe0e0;
+}
+
+.cierre-dif-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.cierre-diferencia.exacto .cierre-dif-label,
+.cierre-diferencia.sobrante .cierre-dif-label {
+    color: #1e7a3f;
+}
+
+.cierre-diferencia.faltante .cierre-dif-label {
+    color: #b00020;
+}
+
+.cierre-dif-valor {
+    font-size: 22px;
+    font-weight: 700;
+    color: #888;
+    line-height: 1.2;
+}
+
+.cierre-diferencia.exacto .cierre-dif-valor,
+.cierre-diferencia.sobrante .cierre-dif-valor {
+    color: #1e7a3f;
+}
+
+.cierre-diferencia.faltante .cierre-dif-valor {
+    color: #b00020;
+}
+
+@media (max-width: 800px) {
+    .cierre-layout {
+        grid-template-columns: 1fr;
+    }
+    .cierre-col-der {
+        border-left: none;
+        border-top: 1px solid #eef1f4;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
