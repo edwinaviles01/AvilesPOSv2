@@ -10,7 +10,7 @@ Desarrollado en **PHP nativo**, con un diseño modular, moderno y adaptable sin 
 
 ---
 
-## 🚀 Características Principales
+## Características Principales
 
 ### 🖥️ Punto de Venta (POS)
 * **Cobro ágil en mostrador**: Búsqueda inmediata de productos por nombre o lectura con lector de código de barras.
@@ -61,7 +61,7 @@ Desarrollado en **PHP nativo**, con un diseño modular, moderno y adaptable sin 
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 | Componente | Tecnología | Descripción |
 | :--- | :--- | :--- |
@@ -102,7 +102,7 @@ AvilesPOSv2/
 
 ---
 
-## ⚙️ Instalación y Puesta en Marcha
+## Instalación y Puesta en Marcha
 
 ### Prerrequisitos
 * Tener instalado un entorno como [XAMPP](https://www.apachefriends.org/), Laragon o LAMP con **PHP 8.0 o superior** y **MariaDB / MySQL**.
