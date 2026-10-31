@@ -92,7 +92,7 @@ if (isset($_SESSION['usuario_id'])) {
             </div>
 
             <div class="info-footer">
-                Desarrollado por <strong>Ing. Edwin Avilés</strong>
+                Desarrollado por <strong>Edwin Avilés, Cristy Flores, Hayder Borge</strong>
             </div>
         </div>
     </div>
